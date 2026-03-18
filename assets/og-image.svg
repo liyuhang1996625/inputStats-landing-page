@@ -1,0 +1,44 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="60" y1="40" x2="1100" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F1EA"/>
+      <stop offset="1" stop-color="#EADFD3"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(220 120) rotate(40) scale(280 220)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 120) rotate(90) scale(180 220)">
+      <stop stop-color="#E18E5B" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#E18E5B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <rect width="1200" height="630" rx="36" fill="url(#glowA)"/>
+  <rect width="1200" height="630" rx="36" fill="url(#glowB)"/>
+  <g opacity="0.95">
+    <rect x="660" y="74" width="456" height="482" rx="34" fill="#F4EEE7" stroke="#E7DACD" stroke-width="2"/>
+    <rect x="692" y="108" width="392" height="416" rx="26" fill="#F8F3ED" stroke="#E8DDD2" stroke-width="2"/>
+    <circle cx="706" cy="92" r="7" fill="#CEC4BB"/>
+    <circle cx="732" cy="92" r="7" fill="#CEC4BB"/>
+    <circle cx="758" cy="92" r="7" fill="#CEC4BB"/>
+    <rect x="724" y="144" width="150" height="108" rx="22" fill="#FBF8F4" stroke="#E5D9CE" stroke-width="2"/>
+    <rect x="892" y="144" width="160" height="108" rx="22" fill="#FBF8F4" stroke="#E5D9CE" stroke-width="2"/>
+    <text x="748" y="182" fill="#63574F" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="22" font-weight="600">Mouse</text>
+    <text x="744" y="222" fill="#D57545" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="44" font-weight="800">18,240</text>
+    <text x="918" y="182" fill="#63574F" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="22" font-weight="600">Keyboard</text>
+    <text x="914" y="222" fill="#5584CC" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="44" font-weight="800">71,493</text>
+    <rect x="724" y="276" width="328" height="160" rx="24" fill="#FBF8F4" stroke="#E5D9CE" stroke-width="2"/>
+    <text x="750" y="320" fill="#241B17" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="34" font-weight="800">Trends</text>
+    <text x="965" y="320" fill="#63574F" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="18" font-weight="600">7 days</text>
+    <path d="M760 392L810 362L848 382L900 328L944 346L1008 300L1020 304V436H760V392Z" fill="#D8E3F6"/>
+    <path d="M760 410L806 388L846 400L892 356L944 378L1002 334L1020 334V436H760V410Z" fill="#EBDAD4"/>
+    <rect x="724" y="456" width="154" height="44" rx="20" fill="#FBF8F4" stroke="#E5D9CE" stroke-width="2"/>
+    <rect x="896" y="456" width="156" height="44" rx="20" fill="#FBF8F4" stroke="#E5D9CE" stroke-width="2"/>
+    <text x="748" y="485" fill="#241B17" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="24" font-weight="800">Heatmap</text>
+    <text x="930" y="485" fill="#241B17" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="24" font-weight="800">Keys</text>
+  </g>
+  <text x="92" y="178" fill="#D57545" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">INPUTSTATS</text>
+  <text x="92" y="282" fill="#1F1714" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="78" font-weight="800">See how you use your Mac.</text>
+  <text x="92" y="344" fill="#61554D" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="28" font-weight="600">Mouse, keys, heatmaps. All local.</text>
+</svg>

@@ -183,6 +183,10 @@ img {
   min-width: 0;
 }
 
+.hero-copy {
+  max-width: 100%;
+}
+
 .hero-frame {
   width: 100%;
   justify-self: end;
@@ -205,18 +209,23 @@ img {
 body[data-lang="zh"] .hero-copy h1 {
   max-width: none;
   white-space: nowrap;
-  font-size: clamp(2.4rem, 5.2vw, 5rem);
+  font-size: clamp(2.05rem, 4.1vw, 4.35rem);
   line-height: 1.06;
   letter-spacing: -0.03em;
 }
 
 body[data-lang="zh"] .hero {
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 520px);
+  grid-template-columns: minmax(0, 1fr) minmax(480px, 540px);
   column-gap: 24px;
 }
 
+body[data-lang="zh"] .hero-copy {
+  max-width: 760px;
+}
+
 body[data-lang="zh"] .hero-frame {
-  max-width: 520px;
+  min-width: 480px;
+  max-width: 540px;
 }
 
 .eyebrow {
