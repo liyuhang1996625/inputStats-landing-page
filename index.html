@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InputStats for macOS</title>
+  <meta
+    name="description"
+    content="Track mouse clicks, keyboard usage, and screen heatmaps locally on your Mac with InputStats."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-lang="en">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="InputStats home">
+        <img
+          src="../XcodeApp/Assets.xcassets/AppIcon.appiconset/icon-128.png"
+          alt="InputStats icon"
+          width="42"
+          height="42"
+        >
+        <div>
+          <strong>InputStats</strong>
+          <span data-i18n="brand_tagline">Native macOS input analytics</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#features" data-i18n="nav_features">Features</a>
+          <a href="#privacy" data-i18n="nav_privacy">Privacy</a>
+          <a href="#download" data-i18n="nav_download">Download</a>
+        </nav>
+
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button class="lang-button is-active" type="button" data-lang-switch="en">EN</button>
+          <button class="lang-button" type="button" data-lang-switch="zh">中</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Local-first analytics</p>
+          <h1 data-i18n="hero_title">See how you use your Mac.</h1>
+          <p class="hero-text" data-i18n="hero_text">Mouse, keyboard, and heatmaps. All local.</p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#download" data-i18n="hero_cta_primary">Download for macOS</a>
+            <a class="button button-secondary" href="#preview" data-i18n="hero_cta_secondary">View preview</a>
+          </div>
+
+          <ul class="hero-points" aria-label="Highlights">
+            <li data-i18n="hero_chip_1">Heatmaps</li>
+            <li data-i18n="hero_chip_2">Key usage</li>
+            <li data-i18n="hero_chip_3">7-day trends</li>
+          </ul>
+        </div>
+
+        <div class="hero-frame" id="preview" aria-label="InputStats dashboard preview">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+          </div>
+
+          <div class="dashboard-surface">
+            <div class="stat-row">
+              <article class="stat-card accent-orange">
+                <span data-i18n="preview_stat_mouse">Mouse</span>
+                <strong>18,240</strong>
+              </article>
+              <article class="stat-card accent-blue">
+                <span data-i18n="preview_stat_keyboard">Keyboard</span>
+                <strong>71,493</strong>
+              </article>
+              <article class="stat-card accent-red">
+                <span data-i18n="preview_stat_today_mouse">Today Mouse</span>
+                <strong>863</strong>
+              </article>
+              <article class="stat-card accent-green">
+                <span data-i18n="preview_stat_today_keys">Today Keys</span>
+                <strong>3,921</strong>
+              </article>
+            </div>
+
+            <section class="panel trend-panel">
+              <div class="panel-head">
+                <h2 data-i18n="preview_trends_title">Trends</h2>
+                <span data-i18n="preview_trends_range">7 days</span>
+              </div>
+              <div class="trend-lines" aria-hidden="true">
+                <div class="line line-mouse"></div>
+                <div class="line line-keyboard"></div>
+              </div>
+            </section>
+
+            <div class="preview-grid">
+              <section class="panel heatmap-panel">
+                <div class="panel-head">
+                  <h2 data-i18n="preview_heatmap_title">Heatmap</h2>
+                  <span data-i18n="preview_heatmap_meta">Display</span>
+                </div>
+                <div class="heatmap">
+                  <span class="hotspot hot-1"></span>
+                  <span class="hotspot hot-2"></span>
+                  <span class="hotspot hot-3"></span>
+                  <span class="hotspot hot-4"></span>
+                  <span class="grid-overlay"></span>
+                </div>
+              </section>
+
+              <section class="panel keyboard-panel">
+                <div class="panel-head">
+                  <h2 data-i18n="preview_keys_title">Keys</h2>
+                  <span data-i18n="preview_keys_meta">Top</span>
+                </div>
+                <div class="keyboard-grid" aria-hidden="true">
+                  <span class="key heavy">A</span>
+                  <span class="key soft">S</span>
+                  <span class="key medium">D</span>
+                  <span class="key heavy">⌘</span>
+                  <span class="key soft">⇧</span>
+                  <span class="key medium">␣</span>
+                  <span class="key soft">J</span>
+                  <span class="key medium">K</span>
+                  <span class="key heavy">↩</span>
+                  <span class="key soft">⌥</span>
+                  <span class="key medium">H</span>
+                  <span class="key soft">L</span>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Product principles">
+        <div data-i18n="trust_1">Local-first</div>
+        <div data-i18n="trust_2">No cloud sync</div>
+        <div data-i18n="trust_3">Native macOS</div>
+        <div data-i18n="trust_4">Pause anytime</div>
+      </section>
+
+      <section class="benefits" id="features">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="benefits_eyebrow">Why InputStats</p>
+          <h2 data-i18n="benefits_title">See your input patterns fast.</h2>
+        </div>
+
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <h3 data-i18n="benefit_1_title">See click hotspots</h3>
+            <p data-i18n="benefit_1_text">Find where activity clusters.</p>
+          </article>
+          <article class="benefit-card">
+            <h3 data-i18n="benefit_2_title">See key habits</h3>
+            <p data-i18n="benefit_2_text">Spot your most-used keys.</p>
+          </article>
+          <article class="benefit-card">
+            <h3 data-i18n="benefit_3_title">See trends</h3>
+            <p data-i18n="benefit_3_text">Compare activity over time.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature-band">
+        <article class="feature-row">
+          <div class="feature-copy">
+            <p class="eyebrow" data-i18n="feature_1_eyebrow">Feature 01</p>
+            <h2 data-i18n="feature_1_title">See where clicks happen.</h2>
+            <p data-i18n="feature_1_text">Heatmaps across one or more displays.</p>
+          </div>
+          <div class="mini-card mini-heatmap" aria-hidden="true">
+            <span class="mini-hotspot mh-1"></span>
+            <span class="mini-hotspot mh-2"></span>
+            <span class="mini-hotspot mh-3"></span>
+          </div>
+        </article>
+
+        <article class="feature-row reverse">
+          <div class="feature-copy">
+            <p class="eyebrow" data-i18n="feature_2_eyebrow">Feature 02</p>
+            <h2 data-i18n="feature_2_title">See which keys matter most.</h2>
+            <p data-i18n="feature_2_text">Keys and shortcuts at a glance.</p>
+          </div>
+          <div class="mini-card mini-keys" aria-hidden="true">
+            <span class="mini-key w2 strong">⌘</span>
+            <span class="mini-key">A</span>
+            <span class="mini-key soft">S</span>
+            <span class="mini-key">D</span>
+            <span class="mini-key soft">F</span>
+            <span class="mini-key w2 strong">␣</span>
+            <span class="mini-key">J</span>
+            <span class="mini-key">K</span>
+            <span class="mini-key strong">↩</span>
+          </div>
+        </article>
+
+        <article class="feature-row">
+          <div class="feature-copy">
+            <p class="eyebrow" data-i18n="feature_3_eyebrow">Feature 03</p>
+            <h2 data-i18n="feature_3_title">See patterns over time.</h2>
+            <p data-i18n="feature_3_text">Mouse and keyboard trends in one view.</p>
+          </div>
+          <div class="mini-card mini-trend" aria-hidden="true">
+            <div class="mini-line l1"></div>
+            <div class="mini-line l2"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="privacy-section" id="privacy">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="privacy_eyebrow">Privacy and setup</p>
+          <h2 data-i18n="privacy_title">Clear permissions. Local data.</h2>
+        </div>
+
+        <div class="privacy-layout">
+          <div class="steps-card">
+            <div class="step">
+              <span>01</span>
+              <div>
+                <h3 data-i18n="privacy_step_1_title">Accessibility</h3>
+                <p data-i18n="privacy_step_1_text">Allow global access.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>02</span>
+              <div>
+                <h3 data-i18n="privacy_step_2_title">Input Monitoring</h3>
+                <p data-i18n="privacy_step_2_text">Enable keyboard stats.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>03</span>
+              <div>
+                <h3 data-i18n="privacy_step_3_title">Start</h3>
+                <p data-i18n="privacy_step_3_text">Data stays on device.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="privacy-card">
+            <h3 data-i18n="privacy_card_title">Privacy</h3>
+            <ul>
+              <li data-i18n="privacy_card_1">Stored locally</li>
+              <li data-i18n="privacy_card_2">No cloud dashboard</li>
+              <li data-i18n="privacy_card_3">Pause or clear anytime</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="download-section" id="download">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="download_eyebrow">Download</p>
+          <h2 data-i18n="download_title">Download and start.</h2>
+        </div>
+
+        <div class="download-grid download-grid-single">
+          <article class="download-card download-primary">
+            <div class="download-head">
+              <div>
+                <h3 data-i18n="download_card_title">InputStats for macOS</h3>
+                <p data-i18n="download_card_text">Local input analytics.</p>
+              </div>
+              <span class="pill" data-i18n="download_pill">Primary CTA</span>
+            </div>
+            <a class="button button-primary button-block" href="#" data-i18n="download_button">Download .app</a>
+            <div class="download-meta">
+              <span data-i18n="download_meta_1">macOS 14+</span>
+              <span data-i18n="download_meta_2">Apple Silicon / Intel</span>
+              <span data-i18n="download_meta_3">Permissions on first launch</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="faq_eyebrow">FAQ</p>
+          <h2 data-i18n="faq_title">Two quick answers.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details open>
+            <summary data-i18n="faq_1_q">Does InputStats upload my activity to the cloud?</summary>
+            <p data-i18n="faq_1_a">No. Stats stay on your Mac.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq_2_q">Why does the app request macOS permissions?</summary>
+            <p data-i18n="faq_2_a">Global stats require Accessibility and Input Monitoring.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <p class="eyebrow" data-i18n="final_eyebrow">Final CTA</p>
+        <h2 data-i18n="final_title">Make input visible.</h2>
+        <p data-i18n="final_text">Local insight for daily work.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#" data-i18n="final_button_primary">Get InputStats for macOS</a>
+          <a class="button button-secondary" href="#top" data-i18n="final_button_secondary">Back to top</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>InputStats</strong>
+        <span data-i18n="footer_tagline">Input analytics for macOS</span>
+      </div>
+      <div class="footer-links">
+        <a href="#privacy" data-i18n="footer_privacy">Privacy</a>
+        <a href="#features" data-i18n="footer_features">Features</a>
+        <a href="#download" data-i18n="footer_download">Download</a>
+      </div>
+    </footer>
+  </div>
+  <script>
+    const translations = {
+      en: {
+        brand_tagline: "Native macOS input analytics",
+        nav_features: "Features",
+        nav_privacy: "Privacy",
+        nav_download: "Download",
+        hero_eyebrow: "Local-first analytics",
+        hero_title: "See how you use your Mac.",
+        hero_text: "Mouse, keys, heatmaps. All local.",
+        hero_cta_primary: "Download for macOS",
+        hero_cta_secondary: "View preview",
+        hero_chip_1: "Heatmaps",
+        hero_chip_2: "Key usage",
+        hero_chip_3: "7-day trends",
+        preview_stat_mouse: "Mouse",
+        preview_stat_keyboard: "Keyboard",
+        preview_stat_today_mouse: "Today Mouse",
+        preview_stat_today_keys: "Today Keys",
+        preview_trends_title: "Trends",
+        preview_trends_range: "7 days",
+        preview_heatmap_title: "Heatmap",
+        preview_heatmap_meta: "Display",
+        preview_keys_title: "Keys",
+        preview_keys_meta: "Top",
+        trust_1: "Local-first",
+        trust_2: "No cloud sync",
+        trust_3: "Native macOS",
+        trust_4: "Pause anytime",
+        benefits_eyebrow: "Why InputStats",
+        benefits_title: "See patterns fast.",
+        benefit_1_title: "See click hotspots",
+        benefit_1_text: "Find active areas.",
+        benefit_2_title: "See key habits",
+        benefit_2_text: "See top keys.",
+        benefit_3_title: "See trends",
+        benefit_3_text: "Track changes.",
+        feature_1_eyebrow: "Feature 01",
+        feature_1_title: "See click areas.",
+        feature_1_text: "Heatmaps for each display.",
+        feature_2_eyebrow: "Feature 02",
+        feature_2_title: "See top keys.",
+        feature_2_text: "Keys and shortcuts.",
+        feature_3_eyebrow: "Feature 03",
+        feature_3_title: "See time trends.",
+        feature_3_text: "Mouse and key trends.",
+        privacy_eyebrow: "Privacy and setup",
+        privacy_title: "Clear access. Local data.",
+        privacy_step_1_title: "Accessibility",
+        privacy_step_1_text: "Allow global access.",
+        privacy_step_2_title: "Input Monitoring",
+        privacy_step_2_text: "Enable keyboard stats.",
+        privacy_step_3_title: "Start",
+        privacy_step_3_text: "Data stays on device.",
+        privacy_card_title: "Privacy",
+        privacy_card_1: "Stored locally",
+        privacy_card_2: "No cloud dashboard",
+        privacy_card_3: "Pause anytime",
+        download_eyebrow: "Download",
+        download_title: "Download and go.",
+        download_card_title: "InputStats for macOS",
+        download_card_text: "Local input analytics.",
+        download_pill: "Primary CTA",
+        download_button: "Download .app",
+        download_meta_1: "macOS 14+",
+        download_meta_2: "Apple Silicon / Intel",
+        download_meta_3: "Permissions on launch",
+        faq_eyebrow: "FAQ",
+        faq_title: "Quick answers.",
+        faq_1_q: "Does it upload data?",
+        faq_1_a: "No. Data stays on your Mac.",
+        faq_2_q: "Why the permissions?",
+        faq_2_a: "They enable global stats.",
+        final_eyebrow: "Final CTA",
+        final_title: "Make input visible.",
+        final_text: "Local insight.",
+        final_button_primary: "Get InputStats for macOS",
+        final_button_secondary: "Back to top",
+        footer_tagline: "Input analytics for macOS",
+        footer_privacy: "Privacy",
+        footer_features: "Features",
+        footer_download: "Download"
+      },
+      zh: {
+        brand_tagline: "macOS 原生输入分析",
+        nav_features: "功能",
+        nav_privacy: "隐私",
+        nav_download: "下载",
+        hero_eyebrow: "本地优先输入分析",
+        hero_title: "看见你如何使用 Mac。",
+        hero_text: "鼠标、按键、热力图。全部本地。",
+        hero_cta_primary: "下载 macOS 版本",
+        hero_cta_secondary: "查看预览",
+        hero_chip_1: "热力图",
+        hero_chip_2: "按键统计",
+        hero_chip_3: "7 天趋势",
+        preview_stat_mouse: "鼠标",
+        preview_stat_keyboard: "键盘",
+        preview_stat_today_mouse: "今日鼠标",
+        preview_stat_today_keys: "今日按键",
+        preview_trends_title: "趋势",
+        preview_trends_range: "7 天",
+        preview_heatmap_title: "热力图",
+        preview_heatmap_meta: "显示器",
+        preview_keys_title: "按键",
+        preview_keys_meta: "高频",
+        trust_1: "本地优先",
+        trust_2: "无需云端",
+        trust_3: "原生 macOS",
+        trust_4: "随时暂停",
+        benefits_eyebrow: "为什么是 InputStats",
+        benefits_title: "更快看见模式。",
+        benefit_1_title: "看见点击热点",
+        benefit_1_text: "快速找到热点。",
+        benefit_2_title: "看见按键习惯",
+        benefit_2_text: "找到高频按键。",
+        benefit_3_title: "看见趋势变化",
+        benefit_3_text: "快速看变化。",
+        feature_1_eyebrow: "功能 01",
+        feature_1_title: "看见点击区域。",
+        feature_1_text: "支持单屏和多屏。",
+        feature_2_eyebrow: "功能 02",
+        feature_2_title: "看见高频按键。",
+        feature_2_text: "按键和快捷键一眼可见。",
+        feature_3_eyebrow: "功能 03",
+        feature_3_title: "看见时间趋势。",
+        feature_3_text: "鼠标和按键一起看。",
+        privacy_eyebrow: "隐私与设置",
+        privacy_title: "权限清晰，数据本地。",
+        privacy_step_1_title: "辅助功能",
+        privacy_step_1_text: "允许全局访问。",
+        privacy_step_2_title: "输入监控",
+        privacy_step_2_text: "启用键盘统计。",
+        privacy_step_3_title: "开始使用",
+        privacy_step_3_text: "数据保留在设备上。",
+        privacy_card_title: "隐私",
+        privacy_card_1: "本地存储",
+        privacy_card_2: "无需云端面板",
+        privacy_card_3: "可随时暂停",
+        download_eyebrow: "下载",
+        download_title: "下载即可开始。",
+        download_card_title: "InputStats for macOS",
+        download_card_text: "面向 macOS 的本地输入分析。",
+        download_pill: "主要入口",
+        download_button: "下载 .app",
+        download_meta_1: "macOS 14+",
+        download_meta_2: "Apple Silicon / Intel",
+        download_meta_3: "首次启动需授权",
+        faq_eyebrow: "常见问题",
+        faq_title: "快速说明。",
+        faq_1_q: "会上传数据吗？",
+        faq_1_a: "不会。数据保存在本机。",
+        faq_2_q: "为什么要权限？",
+        faq_2_a: "用于全局输入统计。",
+        final_eyebrow: "最后一步",
+        final_title: "让输入变得可见。",
+        final_text: "给工作一个本地视角。",
+        final_button_primary: "获取 macOS 版本",
+        final_button_secondary: "回到顶部",
+        footer_tagline: "macOS 输入分析工具",
+        footer_privacy: "隐私",
+        footer_features: "功能",
+        footer_download: "下载"
+      }
+    };
+
+    const root = document.documentElement;
+    const body = document.body;
+    const buttons = document.querySelectorAll("[data-lang-switch]");
+    const nodes = document.querySelectorAll("[data-i18n]");
+
+    function applyLanguage(lang) {
+      const next = translations[lang] ? lang : "en";
+      root.lang = next;
+      body.dataset.lang = next;
+      localStorage.setItem("inputstats-lang", next);
+
+      nodes.forEach((node) => {
+        const key = node.dataset.i18n;
+        if (translations[next][key]) {
+          node.textContent = translations[next][key];
+        }
+      });
+
+      buttons.forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.langSwitch === next);
+      });
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => applyLanguage(button.dataset.langSwitch));
+    });
+
+    applyLanguage(localStorage.getItem("inputstats-lang") || "en");
+  </script>
+</body>
+</html>
