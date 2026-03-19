@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InputStats 版本说明</title>
+  <meta name="description" content="InputStats 版本说明与发布记录。">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="doc-shell">
+    <a class="back-link" href="./index.html">返回下载页</a>
+
+    <section class="doc-hero">
+      <p class="eyebrow">Release Notes</p>
+      <h1>InputStats 版本说明</h1>
+      <p>这个页面用于官网分发版本的公开变更记录。后续每次发布新版本时，应同步更新这里以及 `updates/appcast.xml`。</p>
+    </section>
+
+    <div class="doc-grid">
+      <article class="doc-card">
+        <h2>1.0.0</h2>
+        <p>首个官网分发版本。</p>
+        <ul>
+          <li>统计全局鼠标点击次数和点击热区。</li>
+          <li>统计全局键盘按键次数，支持应用内外监听。</li>
+          <li>提供最近 7 天趋势、鼠标热力图和键盘热键分布。</li>
+          <li>支持菜单栏常驻、开机启动、权限引导和本地 SQLite 存储。</li>
+        </ul>
+      </article>
+
+      <article class="doc-card">
+        <h2>分发说明</h2>
+        <ul>
+          <li>推荐发布为 Developer ID 签名并经过 Apple 公证的 DMG。</li>
+          <li>网站下载页应同时提供版本号、更新时间、SHA-256 校验值和隐私政策。</li>
+          <li>如启用 Sparkle，应保持 `updates/appcast.xml` 与该页面同步更新。</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
