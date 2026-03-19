@@ -204,19 +204,24 @@ img {
 
 body[data-lang="zh"] .hero-copy h1 {
   max-width: none;
-  white-space: nowrap;
-  font-size: clamp(2.4rem, 5.2vw, 5rem);
-  line-height: 1.06;
+  white-space: pre-line;
+  font-size: clamp(2rem, 3.8vw, 4.05rem);
+  line-height: 1.02;
   letter-spacing: -0.03em;
 }
 
 body[data-lang="zh"] .hero {
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 520px);
-  column-gap: 24px;
+  grid-template-columns: minmax(0, 1fr) minmax(560px, 620px);
+  column-gap: 28px;
+}
+
+body[data-lang="zh"] .hero-copy {
+  max-width: 640px;
 }
 
 body[data-lang="zh"] .hero-frame {
-  max-width: 520px;
+  min-width: 560px;
+  max-width: 620px;
 }
 
 .eyebrow {
