@@ -8,20 +8,7 @@
     name="description"
     content="Track mouse clicks, keyboard usage, and screen heatmaps locally on your Mac with InputStats."
   >
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#efe8df">
-  <link rel="canonical" href="https://liyuhang1996625.github.io/inputStats-landing-page/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="InputStats for macOS">
-  <meta property="og:description" content="Track mouse clicks, keyboard usage, and screen heatmaps locally on your Mac with InputStats.">
-  <meta property="og:url" content="https://liyuhang1996625.github.io/inputStats-landing-page/">
-  <meta property="og:image" content="https://liyuhang1996625.github.io/inputStats-landing-page/assets/og-image.svg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="InputStats for macOS">
-  <meta name="twitter:description" content="Track mouse clicks, keyboard usage, and screen heatmaps locally on your Mac with InputStats.">
-  <meta name="twitter:image" content="https://liyuhang1996625.github.io/inputStats-landing-page/assets/og-image.svg">
-  <link rel="icon" type="image/png" href="./assets/favicon.png">
-  <link rel="apple-touch-icon" href="./assets/app-icon-512.png">
+  <link rel="icon" type="image/png" href="./assets/favicon.png?v=20260319">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -35,10 +22,10 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="InputStats home">
         <img
-          src="./assets/app-icon-512.png"
+          src="./assets/app-icon-512.png?v=20260319"
           alt="InputStats icon"
-          width="44"
-          height="44"
+          width="42"
+          height="42"
         >
         <div>
           <strong>InputStats</strong>
@@ -49,7 +36,7 @@
       <div class="header-actions">
         <nav class="site-nav" aria-label="Primary">
           <a href="#features" data-i18n="nav_features">Features</a>
-          <a href="./privacy.html" data-i18n="nav_privacy">Privacy</a>
+          <a href="#privacy" data-i18n="nav_privacy">Privacy</a>
           <a href="#download" data-i18n="nav_download">Download</a>
         </nav>
 
@@ -68,18 +55,22 @@
           <p class="hero-text" data-i18n="hero_text">Mouse, keyboard, and heatmaps. All local.</p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="./downloads/InputStatsApp-1.0.dmg" download data-i18n="hero_cta_primary">Download for macOS</a>
-            <a class="button button-secondary" href="#download" data-i18n="hero_cta_secondary">Install guide</a>
+            <a class="button button-primary" href="#download" data-i18n="hero_cta_primary">Download for macOS</a>
+            <a class="button button-secondary" href="#preview" data-i18n="hero_cta_secondary">View preview</a>
           </div>
 
           <ul class="hero-points" aria-label="Highlights">
-            <li data-i18n="hero_chip_1">Local-first</li>
-            <li data-i18n="hero_chip_2">Website testing build</li>
-            <li data-i18n="hero_chip_3">No cloud sync</li>
+            <li data-i18n="hero_chip_1">Heatmaps</li>
+            <li data-i18n="hero_chip_2">Key usage</li>
+            <li data-i18n="hero_chip_3">7-day trends</li>
           </ul>
         </div>
 
         <div class="hero-frame" id="preview" aria-label="InputStats dashboard preview">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+          </div>
+
           <div class="dashboard-surface">
             <div class="stat-row">
               <article class="stat-card accent-orange">
@@ -136,9 +127,12 @@
                   <span class="key soft">S</span>
                   <span class="key medium">D</span>
                   <span class="key heavy">⌘</span>
-                  <span class="key medium wide">␣</span>
                   <span class="key soft">⇧</span>
+                  <span class="key medium">␣</span>
+                  <span class="key soft">J</span>
+                  <span class="key medium">K</span>
                   <span class="key heavy">↩</span>
+                  <span class="key soft">⌥</span>
                   <span class="key medium">H</span>
                   <span class="key soft">L</span>
                 </div>
@@ -150,9 +144,9 @@
 
       <section class="trust-strip" aria-label="Product principles">
         <div data-i18n="trust_1">Local-first</div>
-        <div data-i18n="trust_2">Website testing build</div>
-        <div data-i18n="trust_3">Manual first-launch approval</div>
-        <div data-i18n="trust_4">Website delivery</div>
+        <div data-i18n="trust_2">No cloud sync</div>
+        <div data-i18n="trust_3">Native macOS</div>
+        <div data-i18n="trust_4">Pause anytime</div>
       </section>
 
       <section class="benefits" id="features">
@@ -280,17 +274,12 @@
               </div>
               <span class="pill" data-i18n="download_pill">Primary CTA</span>
             </div>
-            <a class="button button-primary button-block" href="./downloads/InputStatsApp-1.0.dmg" download data-i18n="download_button">Download DMG</a>
+            <a class="button button-primary button-block" href="./downloads/InputStatsApp-1.0.dmg" download data-i18n="download_button">Download .dmg</a>
             <div class="download-meta">
               <span data-i18n="download_meta_1">macOS 14+</span>
               <span data-i18n="download_meta_2">Apple Silicon / Intel</span>
-              <span data-i18n="download_meta_3">Website testing build</span>
+              <span data-i18n="download_meta_3">Permissions on first launch</span>
             </div>
-            <div class="download-links">
-              <a class="meta-link" href="./releases.html" data-i18n="download_link_notes">Release notes</a>
-              <a class="meta-link" href="./privacy.html" data-i18n="download_link_privacy">Privacy policy</a>
-            </div>
-            <p class="inline-note" data-i18n="download_note">Open the DMG, drag the app into Applications, then on first launch use right-click > Open or allow it in Privacy &amp; Security if macOS blocks it.</p>
           </article>
         </div>
       </section>
@@ -309,18 +298,6 @@
           <details>
             <summary data-i18n="faq_2_q">Why does the app request macOS permissions?</summary>
             <p data-i18n="faq_2_a">Global stats require Accessibility and Input Monitoring.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq_3_q">Does the app record what I type?</summary>
-            <p data-i18n="faq_3_a">No. It only stores key counts and aggregated click regions, not input content.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq_4_q">How will updates work?</summary>
-            <p data-i18n="faq_4_a">Download the latest DMG again and replace the app manually.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq_5_q">What if macOS says the app cannot be opened?</summary>
-            <p data-i18n="faq_5_a">Move the app to Applications, then right-click it and choose Open. If needed, go to System Settings &gt; Privacy &amp; Security and click Open Anyway.</p>
           </details>
         </div>
       </section>
@@ -342,7 +319,7 @@
         <span data-i18n="footer_tagline">Input analytics for macOS</span>
       </div>
       <div class="footer-links">
-        <a href="./privacy.html" data-i18n="footer_privacy">Privacy</a>
+        <a href="#privacy" data-i18n="footer_privacy">Privacy</a>
         <a href="#features" data-i18n="footer_features">Features</a>
         <a href="#download" data-i18n="footer_download">Download</a>
       </div>
@@ -359,10 +336,10 @@
         hero_title: "See how you use your Mac.",
         hero_text: "Mouse, keys, heatmaps. All local.",
         hero_cta_primary: "Download for macOS",
-        hero_cta_secondary: "Install guide",
-        hero_chip_1: "Local-first",
-        hero_chip_2: "Website testing build",
-        hero_chip_3: "No cloud sync",
+        hero_cta_secondary: "View preview",
+        hero_chip_1: "Heatmaps",
+        hero_chip_2: "Key usage",
+        hero_chip_3: "7-day trends",
         preview_stat_mouse: "Mouse",
         preview_stat_keyboard: "Keyboard",
         preview_stat_today_mouse: "Today Mouse",
@@ -374,9 +351,9 @@
         preview_keys_title: "Keys",
         preview_keys_meta: "Top",
         trust_1: "Local-first",
-        trust_2: "Website testing build",
-        trust_3: "Manual first-launch approval",
-        trust_4: "Website delivery",
+        trust_2: "No cloud sync",
+        trust_3: "Native macOS",
+        trust_4: "Pause anytime",
         benefits_eyebrow: "Why InputStats",
         benefits_title: "See patterns fast.",
         benefit_1_title: "See click hotspots",
@@ -411,25 +388,16 @@
         download_card_title: "InputStats for macOS",
         download_card_text: "Local input analytics.",
         download_pill: "Primary CTA",
-        download_button: "Download DMG",
+        download_button: "Download .dmg",
         download_meta_1: "macOS 14+",
         download_meta_2: "Apple Silicon / Intel",
-        download_meta_3: "Direct DMG download",
-        download_link_notes: "Release notes",
-        download_link_privacy: "Privacy policy",
-        download_note: "Open the DMG, drag the app into Applications, then on first launch use right-click > Open or allow it in Privacy & Security if macOS blocks it.",
+        download_meta_3: "Permissions on launch",
         faq_eyebrow: "FAQ",
         faq_title: "Quick answers.",
         faq_1_q: "Does it upload data?",
         faq_1_a: "No. Data stays on your Mac.",
         faq_2_q: "Why the permissions?",
         faq_2_a: "They enable global stats.",
-        faq_3_q: "Does it record what I type?",
-        faq_3_a: "No. It stores key counts and aggregated click regions, not input content.",
-        faq_4_q: "How do updates work?",
-        faq_4_a: "Download the latest DMG again and replace the app manually.",
-        faq_5_q: "What if macOS says the app cannot be opened?",
-        faq_5_a: "Move the app to Applications, then right-click it and choose Open. If needed, go to System Settings > Privacy & Security and click Open Anyway.",
         final_eyebrow: "Final CTA",
         final_title: "Make input visible.",
         final_text: "Local insight.",
@@ -446,13 +414,13 @@
         nav_privacy: "隐私",
         nav_download: "下载",
         hero_eyebrow: "本地优先输入分析",
-        hero_title: "看见你\n如何使用 Mac。",
+        hero_title: "看见你如何使用 Mac。",
         hero_text: "鼠标、按键、热力图。全部本地。",
         hero_cta_primary: "下载 macOS 版本",
-        hero_cta_secondary: "安装说明",
-        hero_chip_1: "本地优先",
-        hero_chip_2: "官网测试版",
-        hero_chip_3: "不做云同步",
+        hero_cta_secondary: "查看预览",
+        hero_chip_1: "热力图",
+        hero_chip_2: "按键统计",
+        hero_chip_3: "7 天趋势",
         preview_stat_mouse: "鼠标",
         preview_stat_keyboard: "键盘",
         preview_stat_today_mouse: "今日鼠标",
@@ -464,9 +432,9 @@
         preview_keys_title: "按键",
         preview_keys_meta: "高频",
         trust_1: "本地优先",
-        trust_2: "官网测试版",
-        trust_3: "首次打开需手动确认",
-        trust_4: "官网下载",
+        trust_2: "无需云端",
+        trust_3: "原生 macOS",
+        trust_4: "随时暂停",
         benefits_eyebrow: "为什么是 InputStats",
         benefits_title: "更快看见模式。",
         benefit_1_title: "看见点击热点",
@@ -501,25 +469,16 @@
         download_card_title: "InputStats for macOS",
         download_card_text: "面向 macOS 的本地输入分析。",
         download_pill: "主要入口",
-        download_button: "直接下载 DMG",
+        download_button: "下载 .dmg",
         download_meta_1: "macOS 14+",
         download_meta_2: "Apple Silicon / Intel",
-        download_meta_3: "浏览器直接下载",
-        download_link_notes: "版本说明",
-        download_link_privacy: "隐私政策",
-        download_note: "下载 DMG 后将应用拖入“应用程序”。如果 macOS 阻止打开，请右键应用选择“打开”，或到“隐私与安全性”里点“仍要打开”。",
+        download_meta_3: "首次启动需授权",
         faq_eyebrow: "常见问题",
         faq_title: "快速说明。",
         faq_1_q: "会上传数据吗？",
         faq_1_a: "不会。数据保存在本机。",
         faq_2_q: "为什么要权限？",
         faq_2_a: "用于全局输入统计。",
-        faq_3_q: "会记录我输入的内容吗？",
-        faq_3_a: "不会。应用只保存按键次数和聚合后的点击热区，不保存输入内容。",
-        faq_4_q: "后续如何更新？",
-        faq_4_a: "重新下载最新 DMG 后手动覆盖安装即可。",
-        faq_5_q: "如果 macOS 提示应用无法打开怎么办？",
-        faq_5_a: "先把应用拖到“应用程序”，然后右键选择“打开”。如果仍被拦截，到“系统设置 > 隐私与安全性”里点“仍要打开”。",
         final_eyebrow: "最后一步",
         final_title: "让输入变得可见。",
         final_text: "给工作一个本地视角。",
