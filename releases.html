@@ -15,7 +15,7 @@
     <section class="doc-hero">
       <p class="eyebrow">Release Notes</p>
       <h1>InputStats 版本说明</h1>
-      <p>这个页面用于官网分发版本的公开变更记录。后续每次发布新版本时，应同步更新这里以及 `updates/appcast.xml`。</p>
+      <p>这个页面用于官网测试版分发的公开变更记录。后续每次发布新版本时，应同步更新这里和下载页。</p>
     </section>
 
     <div class="doc-grid">
@@ -33,9 +33,20 @@
       <article class="doc-card">
         <h2>分发说明</h2>
         <ul>
-          <li>推荐发布为 Developer ID 签名并经过 Apple 公证的 DMG。</li>
+          <li>当前采用官网测试版分发，可直接提供 `.dmg` 下载。</li>
+          <li>如果未加入 Apple Developer Program，首次打开时通常需要用户手动确认“仍要打开”。</li>
           <li>网站下载页应同时提供版本号、更新时间、SHA-256 校验值和隐私政策。</li>
-          <li>如启用 Sparkle，应保持 `updates/appcast.xml` 与该页面同步更新。</li>
+          <li>现阶段更新方式为手动下载安装最新 DMG。</li>
+        </ul>
+      </article>
+
+      <article class="doc-card">
+        <h2>文件命名建议</h2>
+        <ul>
+          <li><code>downloads/InputStats-latest.dmg</code></li>
+          <li><code>downloads/InputStats-latest.sha256</code></li>
+          <li><code>downloads/InputStats-1.0.0.dmg</code></li>
+          <li><code>downloads/InputStats-1.0.0.sha256</code></li>
         </ul>
       </article>
     </div>
